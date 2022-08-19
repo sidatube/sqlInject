@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="login">Login</a>/<a href="register">Login</a>
+<a href="login">Login</a>/<a href="register">Register</a>
 </body>
 </html>

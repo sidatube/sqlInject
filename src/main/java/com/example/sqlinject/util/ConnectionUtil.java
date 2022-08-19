@@ -8,13 +8,14 @@ public class ConnectionUtil {
     private static Connection connection;
 
     public synchronized static Connection getConnection() {
-        String url = "jdbc:mysql://localhost:3306/SQLInjection?createDatabaseIfNotExist=true";
+        String url = "jdbc:mysql://localhost:3306/sqlinjection?createDatabaseIfNotExist=true";
         String user = "root";
-        String pass = "root";
+        String pass = "";
         if (connection == null) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 connection = DriverManager.getConnection(url, user, pass);
+                System.out.println("Success");
             } catch (SQLException | ClassNotFoundException throwables) {
                 throwables.printStackTrace();
             }
